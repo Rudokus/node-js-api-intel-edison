@@ -14,6 +14,6 @@ module.exports = function(app) {
   // /in/8/false
   // /in/8/enable
   // /in/8/disable
-  app.get('/in/:id/:switch', serviceController.ReadDynamicIO);
+  app.get('/in/:id', serviceController.ReadDynamicIO);
   
 };

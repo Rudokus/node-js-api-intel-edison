@@ -17,6 +17,5 @@ exports.ReadDynamicIO = function(req, res) {
   var id = parseInt(req.params.id);
   var pin = new mraa.Gpio(id);
   pin.dir(mraa.DIR_IN);
-  pin.write(helper.switchIO(req.params.switch));
-  res.json({ message: helper.switchIOMessage(req.params.switch) + ' IO ' + id });
+  res.json({ message: ' IO ' + id + " Reads " + pin.read() });
 };
