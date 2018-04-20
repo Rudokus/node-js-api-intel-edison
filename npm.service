@@ -1,0 +1,16 @@
+// Once you have created your script, we have to create a system service:
+
+// Create the service file here: /etc/system/system
+
+// Enable the service: systemctl enable my_service.service
+
+
+[Unit]
+Description = Setting up Edison Node Server
+After = network.service
+
+[Service]
+ExecStart =/bin/bash /home/root/startup.sh
+
+[Install]
+WantedBy = multi-user.target
